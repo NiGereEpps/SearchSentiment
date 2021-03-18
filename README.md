@@ -15,11 +15,12 @@ This project focuses on AI search result generation bias in the form of a Firefo
 In order to use this addon, do the following steps:
 1. Click the green Code button and select "Download zip" 
 2. Extract the files to a location of your choice (ie Desktop)
-3. Open Firefox and go to: [about:debugging](about:debugging#/runtime/this-firefox)
-4. Click "This Firefox", "Load Temporary Add-on"
+3. Open Firefox, go to: [about:debugging](about:debugging#/runtime/this-firefox), and click "This Firefox"
+4. Click "Load Temporary Add-on"
 ![](installExample.png)
 5. Double click any file in the extracted folder
 6. Go to [Google Search](https://www.google.com/) and search any input (ie "men") 
+7. In order to disable the addon, repeat step 3 and click Remove
 
 ## Example Usage
 
