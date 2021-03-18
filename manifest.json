@@ -1,0 +1,19 @@
+{
+
+  "description": "Sentiment analyzer for AI generated searches, specifically Google Search. Install this addon and search anything using Google to see the result",
+  "manifest_version": 2,
+  "name": "Search Sentiment",
+  "version": "1.0",
+  "homepage_url": "https://github.com/NiGereEpps/SearchSentiment",
+  "icons": {
+    "48": "icons/search-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/search*"],
+      "js": ["searchSentiment.js", "bundle.js"]
+    }
+  ]
+
+}
