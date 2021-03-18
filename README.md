@@ -17,7 +17,7 @@ In order to use this addon, do the following steps:
 2. Extract the files to a location of your choice (ie Desktop)
 3. Open Firefox, go to: [about:debugging](about:debugging#/runtime/this-firefox), and click "This Firefox"
 4. Click "Load Temporary Add-on"
-![](installExample.png)
+![](readMeImages/installExample.png)
 5. Double click any file in the extracted folder
 6. Go to [Google Search](https://www.google.com/) and search any input (ie "men", "business", or culture") 
 
