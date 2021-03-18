@@ -14,7 +14,7 @@ This project focuses on AI search result generation bias in the form of a Firefo
 
 In order to use this addon, do the following steps:
 1. Click the green Code button and select "Download zip" 
-2. Extract the files to a location of your choice (ie Desktop)
+2. Extract the files (you can skip the "readMeImages folder") to a location of your choice (ie Desktop)
 3. Open Firefox, go to: [about:debugging](about:debugging#/runtime/this-firefox), and click "This Firefox"
 4. Click "Load Temporary Add-on"
 ![](readMeImages/installExample.png)
@@ -24,7 +24,7 @@ In order to use this addon, do the following steps:
 ## Example Usage
 
 This is an example of how the addon works. All searches (besides the initial one) are automatic
-![](searchExample.gif)
+![](readMeImages/searchExample.gif)
 In order to disable the addon, repeat step 3 and click Remove
 
 <!-- ROADMAP -->
