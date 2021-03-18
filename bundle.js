@@ -4598,11 +4598,47 @@ module.exports = function(input) {
 },{}],10:[function(require,module,exports){
 var ls = window.localStorage;
 
+document.head.insertAdjacentHTML("beforeend",
+`<style>
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+</style>`)
+
+var overlay = document.createElement("div")
+overlay.id = "overlay"
+var text = document.createElement("div")
+text.id = "text"
+text.innerHTML = "Gathering Results For Sentiment Analysis"
+overlay.appendChild(text)
+
+
 if (ls.getItem('Search') == null) {
 
-    var input2 = document.querySelector('.gLFyf').value
+    var input = document.querySelector('.gLFyf').value
 
-    ls.setItem('Input', input2)
+    ls.setItem('Input', input)
 
     document.querySelector('[aria-label="Page 3"]').click();
 
@@ -4610,6 +4646,7 @@ if (ls.getItem('Search') == null) {
 
 } else if (ls.getItem('Search') == 1) {
 
+    document.querySelector('.main').appendChild(overlay);
 
     setTimeout(function() {
 
@@ -4635,6 +4672,8 @@ if (ls.getItem('Search') == null) {
 
 } else if (ls.getItem('Search') == 2) {
 
+    document.querySelector('.main').appendChild(overlay);
+
     document.querySelector('[aria-label="Page 3"]').click();
 
     ls.setItem('Search', 3)
@@ -4643,6 +4682,8 @@ if (ls.getItem('Search') == null) {
 } else if (ls.getItem('Search') == 3) {
 
     setTimeout(function() {
+
+        document.querySelector('.main').appendChild(overlay);
 
         var results = [];
 
@@ -4666,6 +4707,8 @@ if (ls.getItem('Search') == null) {
 
 } else if (ls.getItem('Search') == 4) {
 
+    document.querySelector('.main').appendChild(overlay);
+
     document.querySelector('[aria-label="Page 3"]').click();
 
     ls.setItem('Search', 5)
@@ -4673,6 +4716,8 @@ if (ls.getItem('Search') == null) {
 } else if (ls.getItem('Search') == 5) {
 
     setTimeout(function() {
+
+        document.querySelector('.main').appendChild(overlay);
 
         var results = [];
 
@@ -4695,6 +4740,8 @@ if (ls.getItem('Search') == null) {
     }, 1000);
 
 } else {
+
+    document.querySelector('.main').appendChild(overlay);
 
     setTimeout(function() {
 
@@ -4786,8 +4833,7 @@ if (ls.getItem('Search') == null) {
         result1.forEach(function(item) {
             let li = document.createElement('li');
             ul.appendChild(li);
-            //score = sentiment.analyze(item).score
-            score = 2
+            score = sentiment.analyze(item).score
             r1scores.push(score)
             output = item.concat('<br />Score = ' + score) 
             li.innerHTML += output;
@@ -4795,6 +4841,7 @@ if (ls.getItem('Search') == null) {
 
         var r1sum = r1scores.reduce((a, b) => a + b, 0);
         var r1avg = (r1sum / r1scores.length) || 0;
+        r1avg = Math.round((r1avg + Number.EPSILON) * 100) / 100
 
         h21.innerHTML = "Average Sentiment Score: " + r1avg
 
@@ -4818,6 +4865,7 @@ if (ls.getItem('Search') == null) {
 
         var r2sum = r2scores.reduce((a, b) => a + b, 0);
         var r2avg = (r2sum / r2scores.length) || 0;
+        r2avg = Math.round((r2avg + Number.EPSILON) * 100) / 100
 
         h22.innerHTML = "Average Sentiment Score: " + r2avg
 
@@ -4841,6 +4889,8 @@ if (ls.getItem('Search') == null) {
 
         var r3sum = r3scores.reduce((a, b) => a + b, 0);
         var r3avg = (r3sum / r3scores.length) || 0;
+        r3avg = Math.round((r3avg + Number.EPSILON) * 100) / 100
+
 
         h23.innerHTML = "Average Sentiment Score: " + r3avg
 
