@@ -25,6 +25,7 @@ In order to use this addon, do the following steps:
 
 This is an example of how the addon works. All searches (besides the initial one) are automatic
 ![](readMeImages/searchExample.gif)
+
 In order to disable the addon, repeat step 3 and click Remove
 
 <!-- ROADMAP -->
