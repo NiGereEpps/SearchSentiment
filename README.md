@@ -33,4 +33,6 @@ When initially starting this project, I attempted to use Node.js and Express to 
 
 Future goals would be to include more options when searching (ie rather than just adding "black" and "white" to the input query, ideally one could customize the addition words to be any word such as "old", "LGBTQ", "Italian"). This would give the user more freedom to discover the inherit bias / sentiment of Google search results. 
 
-Additionally, I would like to add more CSS to the page to give it a more modern / Google-like look.
+Currently, the add-on navigates to Page 3 of the Google Search results in order to avoid ads, dictionaries, and company websites. In the future, it may be useful to explore different pages of the search results as well as using the addon from different locations (ie using a VPN) to see if we get the same findings due to Google's search engine personalization. 
+
+Other potential objectives would be to create a popup for the add-on so that it can be enabled, disabled, and customized. Using other sentiment analyzers such as ml5's [Sentiment](https://ml5js.org/reference/api-Sentiment/) based on AI could also lead to further discoveries and comparisons. 
