@@ -19,13 +19,13 @@ In order to use this addon, do the following steps:
 4. Click "Load Temporary Add-on"
 ![](installExample.png)
 5. Double click any file in the extracted folder
-6. Go to [Google Search](https://www.google.com/) and search any input (ie "men") 
-7. In order to disable the addon, repeat step 3 and click Remove
+6. Go to [Google Search](https://www.google.com/) and search any input (ie "men", "business", or culture") 
 
 ## Example Usage
 
 This is an example of how the addon works. All searches (besides the initial one) are automatic
 ![](searchExample.gif)
+In order to disable the addon, repeat step 3 and click Remove
 
 <!-- ROADMAP -->
 ## Roadmap
