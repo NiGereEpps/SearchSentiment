@@ -6,7 +6,7 @@ Sentiment analyzer for AI generated searches, specifically Google Search
 
 This project is addressing the bias, lack of representation, and misrepresentation of minorities (specifically black people and culture) in AI. These issues range from healthcare, prison systems, image matching, speech, and more popularly facial recognition. 
 
-This project focuses on AI search result generation in the form of a Firefox addon. The goal of this tool is to understand and reveal the hidden impact of AI and what type of sentiment it produces when being used. Its focus is on Google Search and the results that it gives for various inputs. 
+This project focuses on AI search result generation bias in the form of a Firefox addon. The goal of this tool is to understand and reveal the hidden impact of AI and what type of sentiment (analyzed numerically) that it produces when being used. Its focus is on Google Search and the results / sentiment scores that it gives for various inputs. 
 
 
 <!-- GETTING STARTED -->
